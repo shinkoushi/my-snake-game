@@ -1,0 +1,145 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  min-height: 100vh;
+  background: #E3F2FD;
+}
+.title-game{
+    color: #212837;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: #293447;
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+.game-details {
+  color: #B8C6DC;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #212837;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.play-board .food {
+  background: #FF003D;
+  border-radius: 100%;
+}
+.play-board .head {
+  background: lightgreen;
+ 
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 90%;
+  background-color: #212837;
+  
+}
+.controls i {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #B8C6DC;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+  
+}
+#kiri{
+    position: absolute;
+    top:570px;
+    left: 30px;
+    font-size: 1.3rem;
+    background-color: #212837;
+    padding: 7px 0;
+    color: white;
+}
+#kanan{
+    position: absolute;
+    top:570px;
+    right: 30px;
+    font-size: 1.3rem;
+    background-color: #212837;
+    padding: 7px 0;
+    color: white;
+}
+#atas{
+    position: absolute;
+    top:550px;
+    left: 38%;
+    font-size: 1.3rem;
+    background-color: #212837;
+    padding: 7px 0;
+    color: white;
+}
+#bawah{
+    position: absolute;
+    top:600px;
+    left: 38%;
+    font-size: 1.3rem;
+    background-color: #212837;
+    padding: 7px 0;
+    color: white;
+}
+#kiri:hover,
+#kanan:hover,
+#atas:hover,
+#bawah:hover{
+    color: crimson;
+    transition: ease 0.5s;
+}
+footer{
+color: #191919;
+margin-top:10px;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+  #kiri, #kanan, #atas, #bawah{
+  font-size: 1rem;
+  }
+  
+  footer{
+    margin-top:117px;
+  }
+}
