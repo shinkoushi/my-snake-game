@@ -15,7 +15,7 @@ let score = 0;
 
 // Getting high score from the local storage
 let highScore = localStorage.getItem("high-score") || 0;
-highScoreElement.innerText = `Score Tertinggi: ${highScore}`;
+highScoreElement.innerText = `Skor Tertinggi: ${highScore}`;
 
 const updateFoodPosition = () => {
     // Passing a random 1 - 30 value as food position
@@ -85,8 +85,8 @@ const initGame = () => {
         score++; // increment score by 1
         highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore);
-        scoreElement.innerText = `Score: ${score}`;
-        highScoreElement.innerText = `Score Tertinggi: ${highScore}`;
+        scoreElement.innerText = `Skor: ${score}`;
+        highScoreElement.innerText = `Skor Tertinggi: ${highScore}`;
 
         // Play audio if score has increased
         if (previousScore < score) {
